@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .carousel-inner .carousel-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .search-icon {
+            width: 20px;
+            /* Adjust the size as needed */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+
+        .navbar-wrapper {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            /* Add border bottom */
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            /* Add box shadow */
+        }
+
+        .navbar {
+            height: 60px;
+            /* Set the height of the navigation bar */
+        }
+
+        .navbar-nav {
+            align-items: center;
+            /* Vertically align content */
+        }
+
+        .btn-dark:hover {
+            color: skyblue !important;
+            /* Change font color to sky blue on hover */
+        }
+
+        span {
+            display: inline-block;
+            height: 20px;
+            width: 2px;
+            background-color: rgba(0, 0, 0, 0.407);
+        }
+
+        /* Custom CSS for hover effect on <a> tag */
+        a:hover {
+            color: blue !important;
+            text-decoration: underline !important;
+        }
+
+        .nav2 {
+            color: gray;
+            text-decoration: none;
+            transition: color 0.5s;
+        }
+
+        .nav2:hover {
+            color: skyblue;
+        }
+
+        .plyr__video-wrapper {
+            width: 70%;
+            /* Set the width to 70% */
+            height: 580px;
+        }
+
+        .plyr__video-wrapper .plyr__video-embed {
+            width: 100%;
+        }
+
+        .content {
+            width: 30%;
+            /* Set the width to 30% */
+            height: 510px;
+        }
+
+        a.nav-link {
+            text-decoration: none;
+            color: gray;
+            transition: color 0.3s ease-in-out;
+            /* Transition for color change */
+        }
+
+        /* Hover effect */
+        a.nav-link:hover {
+            color: red;
+            text-decoration: underline;
+            text-underline-offset: 7px;
+        }
+
+        a.active {
+            color: red;
+            text-decoration: underline;
+            text-underline-offset: 7px;
+
+        }
+
+        .custom-span {
+            background-color: skyblue;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body style="height: 2000px;">
+
+    <div class="navbar-wrapper">
+        <div class="container">
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid"> <!-- Use container-fluid to make the navbar span the whole width -->
+                    <a class="navbar-brand" href="#">
+                        <img src="img/logo.svg" alt="GUDSHO" width="166" height="44" class="forhome">
+                    </a>
+                    <div class="d-flex gap-3">
+                        <button type="button" class="btn btn-light btn-md">
+                            <img src="img/search.png" alt="" class="search-icon"> Search
+                        </button>
+                        <button type="button" class="btn btn-dark btn-md">Creators</button>
+                        <button type="button" class="btn btn-light btn-md">Icon</button>
+                    </div>
+                </div>
+            </nav>
+
+
+
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="d-flex mt-3 mb-3">
+            <a href="#" class="nav2 mx-1">Home</a>
+            <span class="mx-1"></span>
+            <a href="#" class="nav2 mx-1">MirrorFly</a>
+            <span class="mx-1"></span>
+            <p class="mx-1">Call Initialization using MirrorFly’s SDK in Android Studio</p>
+        </div>
+
+
+        <div class="d-flex">
+            <div class="plyr__video-wrapper">
+                <video playsinline id="player" class="plyr__video-embed" src="videos/videoOne.mp4" autoplay></video>
+                <div class="plyr__poster"></div>
+            </div>
+            <div class="content border border-secondary px-4">
+                <div class="mb-3 mt-4">
+                    <h3>Call Initialization using <br> MirrorFly’s SDK in Android <br> Studio</h3>
+                </div>
+                <div class="d-flex align-items-start mb-3">
+                    <div class="d-flex align-items-center mx-2">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                    </div>
+                    <div class="d-flex align-items-center mx-2">
+                        <p class="m-0">1 rating</p> <span class="mx-2"></span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <a href="" class="d-flex align-items-center">Rate <svg class="mx-2"
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 13.292 13.413">
+                                <g id="Icon_feather-edit" data-name="Icon feather-edit"
+                                    transform="translate(0.75 0.871)">
+                                    <path id="Path_61226" data-name="Path 61226"
+                                        d="M8.275,6h-4.1A1.172,1.172,0,0,0,3,7.172v8.2a1.172,1.172,0,0,0,1.172,1.172h8.2a1.172,1.172,0,0,0,1.172-1.172v-4.1"
+                                        transform="translate(-3 -4.757)" fill="none" stroke="#fa121b"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                    <path id="Path_61227" data-name="Path 61227"
+                                        d="M18.154,3.182A1.243,1.243,0,0,1,19.912,4.94l-5.568,5.568L12,11.094l.586-2.344Z"
+                                        transform="translate(-8.484 -2.818)" fill="none" stroke="#fa121b"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+                                </g>
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <img src="https://gudsho-channelstatic.akamaized.net/mirrorfly-usr-rFab/channel_logo/1669886187371-"
+                        alt="MirrorFly" width="22" height="22">
+                    <p class="mx-2">by</p> <!-- Added mx-2 class for horizontal margin -->
+                    <a href="">MirrorFly</a>
+                </div>
+                <div class="mb-4 mt-2">
+                    <button type="button" class="btn btn-info btn-sm mx-2">191 views</button>
+                    <button type="button" class="btn btn-secondary btn-sm mx-2">1m</button>
+                    <button type="button" class="btn btn-secondary btn-sm mx-2">2022</button>
+                    <button type="button" class="btn btn-outline-dark btn-sm mx-2">Dark</button>
+                </div>
+                <div>
+                    <p>Initialize calls on Android applications quickly with our live coding video across platforms.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ................ -->
+
+        <div class="d-flex">
+            <a href="#" class="nav-link fs-5 active">Rating</a>
+            <a href="#" class="nav-link mx-5 fs-5">About</a>
+            <a href="#" class="nav-link mx-5 fs-5">More video like this</a>
+        </div>
+
+        <div class="bg-light">
+            <div class="d-flex align-items-center mt-3">
+                <h4>Revies</h4>
+                <a href="" class="d-flex align-items-center mx-3">Rate <svg class="mx-2"
+                        xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 13.292 13.413">
+                        <g id="Icon_feather-edit" data-name="Icon feather-edit" transform="translate(0.75 0.871)">
+                            <path id="Path_61226" data-name="Path 61226"
+                                d="M8.275,6h-4.1A1.172,1.172,0,0,0,3,7.172v8.2a1.172,1.172,0,0,0,1.172,1.172h8.2a1.172,1.172,0,0,0,1.172-1.172v-4.1"
+                                transform="translate(-3 -4.757)" fill="none" stroke="#fa121b" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="1.5"></path>
+                            <path id="Path_61227" data-name="Path 61227"
+                                d="M18.154,3.182A1.243,1.243,0,0,1,19.912,4.94l-5.568,5.568L12,11.094l.586-2.344Z"
+                                transform="translate(-8.484 -2.818)" fill="none" stroke="#fa121b" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="1.5"></path>
+                        </g>
+                    </svg></a>
+            </div>
+
+            <div class="d-flex mt-4">
+                <span class="custom-span">s</span>
+
+                <div class="d-flex align-items-center mx-4">
+                    <h5>StephanChinnatambi</h5>
+                    <div class="d-flex align-items-center mx-2">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <hr>
+            <h5 class="mt-4">About “Call Initialization using MirrorFly’s SDK in Android Studio”
+            </h5>
+            <a href="">#sdk #android #studio</a>
+            <p class="py-3">Leverage this short tutorial to initialize calls on your Android app in minutes. Fuel modern
+                calling features on all apps with the help of our call SDK sample for simplified in-app deployment.</p>
+
+            <ul>
+                <li>In this video,</li>
+                <li>00:04 Initialize call SDK
+                </li>
+                <li>00:11 Add code for Kotlin</li>
+                <li>00:26 Setting up call manager function</li>
+
+            </ul>
+
+            <p class="py-3">Need help getting started with MirrorFly Android call integration? please visit
+                https://www.mirrorfly.com/docs/audio-video/android/quick-start for further assistance
+
+            </p>
+
+            <p>Other useful links:</p>
+
+            <ul class="mb-4">
+                <li>Android Chat SDK: <a href="">https://www.mirrorfly.com/docs/chat/android/quick-start
+                    </a></li>
+                <li>iOS Chat SDK: <a href="">https://www.mirrorfly.com/docs/chat/ios/quick-start</a></li>
+                <li>UIKit Android & Java Docs: <a href="">https://www.mirrorfly.com/docs/UIKit/overview</a></li>
+                <li>Voice & Video call sdks:<a href="">https://www.mirrorfly.com/docs/audio-video/overview</a></li>
+                <li>Tech support: <a href="">https://console.mirrorfly.com/raise-ticket</a></li>
+            </ul>
+
+            <hr>
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <!-- <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul> -->
+
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col">
+                                <img _ngcontent-serverapp-c84="" width="318" height="187" loading="lazy"
+                                    fetchpriority="auto" class="thumb-img ng-tns-c84-4 ng-star-inserted"
+                                    alt="Build Voice Calling App using SDK in Android" ng-img="true"
+                                    src="https://gudsho-channelstatic.akamaized.net/mirrorfly-usr-rFab/thumbnail_images/2023/01/09/1673270922351-blob.jpg">
+                                <div class="px-3 py-3">
+                                    <h5>Build Voice Calling App Using SDK in <br> Android</h5>
+                                    <div class="d-flex">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col">
+                                <img _ngcontent-serverapp-c84="" width="318" height="187" loading="lazy"
+                                    fetchpriority="auto" class="thumb-img ng-tns-c84-4 ng-star-inserted"
+                                    alt="Build Voice Calling App using SDK in Android" ng-img="true"
+                                    src="https://gudsho-channelstatic.akamaized.net/mirrorfly-usr-rFab/thumbnail_images/2023/01/09/1673270922351-blob.jpg">
+                                <div class="px-3 py-3">
+                                    <h5>Build Voice Calling App Using SDK in <br> Android</h5>
+                                    <div class="d-flex">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col">
+                                <img _ngcontent-serverapp-c84="" width="318" height="187" loading="lazy"
+                                    fetchpriority="auto" class="thumb-img ng-tns-c84-4 ng-star-inserted"
+                                    alt="Build Voice Calling App using SDK in Android" ng-img="true"
+                                    src="https://gudsho-channelstatic.akamaized.net/mirrorfly-usr-rFab/thumbnail_images/2023/01/09/1673270922351-blob.jpg">
+                                <div class="px-3 py-3">
+                                    <h5>Build Voice Calling App Using SDK in <br> Android</h5>
+                                    <div class="d-flex">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col">
+                                <img _ngcontent-serverapp-c84="" width="318" height="187" loading="lazy"
+                                    fetchpriority="auto" class="thumb-img ng-tns-c84-4 ng-star-inserted"
+                                    alt="Build Voice Calling App using SDK in Android" ng-img="true"
+                                    src="https://gudsho-channelstatic.akamaized.net/mirrorfly-usr-rFab/thumbnail_images/2023/01/09/1673270922351-blob.jpg">
+                                <div class="px-3 py-3">
+                                    <h5>Build Voice Calling App Using SDK in <br> Android</h5>
+                                    <div class="d-flex">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col">
+                                <img _ngcontent-serverapp-c84="" width="318" height="187" loading="lazy"
+                                    fetchpriority="auto" class="thumb-img ng-tns-c84-4 ng-star-inserted"
+                                    alt="Build Voice Calling App using SDK in Android" ng-img="true"
+                                    src="https://gudsho-channelstatic.akamaized.net/mirrorfly-usr-rFab/thumbnail_images/2023/01/09/1673270922351-blob.jpg">
+                                <div class="px-3 py-3">
+                                    <h5>Build Voice Calling App Using SDK in <br> Android</h5>
+                                    <div class="d-flex">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col">
+                                <img _ngcontent-serverapp-c84="" width="318" height="187" loading="lazy"
+                                    fetchpriority="auto" class="thumb-img ng-tns-c84-4 ng-star-inserted"
+                                    alt="Build Voice Calling App using SDK in Android" ng-img="true"
+                                    src="https://gudsho-channelstatic.akamaized.net/mirrorfly-usr-rFab/thumbnail_images/2023/01/09/1673270922351-blob.jpg">
+                                <div class="px-3 py-3">
+                                    <h5>Build Voice Calling App Using SDK in <br> Android</h5>
+                                    <div class="d-flex">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                        <img style="width: 30px;" src="img/star.svg" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+
+        </div>
+
+        <footer class="bg-dark text-white py-4 px-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="img/logo-grey.svg" alt="">
+                        <p class="mt-3">GUDSHO is a premium online video platform for creators and video-driven brands
+                            to host, manage, market, distribute, stream and earn online without limits.</p>
+                        <button type="button" class="btn btn-danger">Try it free</button>
+                    </div>
+
+                    <div class="col-md-2">
+                        <p>Features</p>
+                        <a class="text-white d-block mb-2" href="">Video Hosting</a>
+                        <a class="text-white d-block mb-2" href="">Live Streaming</a>
+                        <a class="text-white d-block mb-2" href="">Video CMS</a>
+                        <a class="text-white d-block mb-2" href="">Video Security</a>
+                        <a class="text-white d-block mb-2" href="">Video Analytics</a>
+                        <a class="text-white d-block" href="">Video Streaming</a>
+                    </div>
+                    <div class="col-md-2">
+                        <p>Features</p>
+                        <a class="text-white d-block mb-2" href="">Video Hosting</a>
+                        <a class="text-white d-block mb-2" href="">Live Streaming</a>
+                        <a class="text-white d-block mb-2" href="">Video CMS</a>
+                        <a class="text-white d-block mb-2" href="">Video Security</a>
+                        <a class="text-white d-block mb-2" href="">Video Analytics</a>
+                        <a class="text-white d-block" href="">Video Streaming</a>
+                    </div>
+                    <div class="col-md-2">
+                        <p>Features</p>
+                        <a class="text-white d-block mb-2" href="">Video Hosting</a>
+                        <a class="text-white d-block mb-2" href="">Live Streaming</a>
+                        <a class="text-white d-block mb-2" href="">Video CMS</a>
+                        <a class="text-white d-block mb-2" href="">Video Security</a>
+                        <a class="text-white d-block mb-2" href="">Video Analytics</a>
+                        <a class="text-white d-block" href="">Video Streaming</a>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h5>Apps</h5>
+                        <a class="d-block mb-1 mt-3" href=""><img src="img/playstore.svg" alt=""></a> <br>
+                        <a href=""><img src="img/appstore.svg" alt=""></a>
+                        <h5 class="mb-3 mt-3">Follow us</h5>
+
+                        <svg _ngcontent-serverApp-c116="" xmlns="http://www.w3.org/2000/svg" width="27" height="27"
+                            viewBox="0 0 27 27" fill="none">
+                            <path _ngcontent-serverApp-c116=""
+                                d="M16.4927 14.2995L16.8585 12.0153H14.5711V10.533C14.5711 9.90814 14.8906 9.299 15.9151 9.299H16.955V7.35427C16.955 7.35427 16.0113 7.19995 15.109 7.19995C13.2253 7.19995 11.994 8.29397 11.994 10.2745V12.0153H9.89999V14.2995H11.994V19.8214H14.5711V14.2995H16.4927Z"
+                                fill="#92AACD"></path>
+                            <circle _ngcontent-serverApp-c116="" cx="13.5" cy="13.5" r="13" stroke="#92AACD"></circle>
+                        </svg>
+
+                        <svg _ngcontent-serverApp-c116="" xmlns="http://www.w3.org/2000/svg" width="27" height="27"
+                            viewBox="0 0 27 27" fill="none">
+                            <path _ngcontent-serverApp-c116=""
+                                d="M13.3908 10.3321C11.5068 10.3321 9.9871 11.8039 9.9871 13.6285C9.9871 15.4532 11.5068 16.9249 13.3908 16.9249C15.2749 16.9249 16.7946 15.4532 16.7946 13.6285C16.7946 11.8039 15.2749 10.3321 13.3908 10.3321ZM13.3908 15.7716C12.1733 15.7716 11.178 14.8105 11.178 13.6285C11.178 12.4465 12.1703 11.4854 13.3908 11.4854C14.6113 11.4854 15.6037 12.4465 15.6037 13.6285C15.6037 14.8105 14.6083 15.7716 13.3908 15.7716ZM17.7277 10.1973C17.7277 10.6247 17.3722 10.9661 16.9338 10.9661C16.4924 10.9661 16.1399 10.6219 16.1399 10.1973C16.1399 9.77267 16.4954 9.4284 16.9338 9.4284C17.3722 9.4284 17.7277 9.77267 17.7277 10.1973ZM19.982 10.9776C19.9317 9.94768 19.6888 9.03535 18.9097 8.28369C18.1335 7.53203 17.1915 7.29678 16.128 7.24514C15.032 7.18489 11.7467 7.18489 10.6507 7.24514C9.59014 7.29391 8.64812 7.52916 7.86902 8.28082C7.08993 9.03248 6.84998 9.94481 6.79666 10.9748C6.73445 12.0363 6.73445 15.2179 6.79666 16.2794C6.84702 17.3094 7.08993 18.2217 7.86902 18.9734C8.64812 19.725 9.58718 19.9603 10.6507 20.0119C11.7467 20.0722 15.032 20.0722 16.128 20.0119C17.1915 19.9631 18.1335 19.7279 18.9097 18.9734C19.6858 18.2217 19.9287 17.3094 19.982 16.2794C20.0442 15.2179 20.0442 12.0391 19.982 10.9776ZM18.566 17.4184C18.335 17.9807 17.8877 18.4139 17.3041 18.6406C16.4302 18.9762 14.3565 18.8988 13.3908 18.8988C12.4251 18.8988 10.3485 18.9734 9.47757 18.6406C8.89696 18.4168 8.44964 17.9836 8.21562 17.4184C7.86902 16.5721 7.94901 14.5638 7.94901 13.6285C7.94901 12.6932 7.87199 10.6821 8.21562 9.83866C8.44668 9.27634 8.89399 8.84313 9.47757 8.61649C10.3515 8.28082 12.4251 8.35828 13.3908 8.35828C14.3565 8.35828 16.4331 8.28369 17.3041 8.61649C17.8847 8.84027 18.332 9.27348 18.566 9.83866C18.9126 10.685 18.8326 12.6932 18.8326 13.6285C18.8326 14.5638 18.9126 16.5749 18.566 17.4184Z"
+                                fill="#92AACD"></path>
+                            <circle _ngcontent-serverApp-c116="" cx="13.5" cy="13.5" r="13" stroke="#92AACD"></circle>
+                        </svg>
+
+                        <svg _ngcontent-serverApp-c116="" xmlns="http://www.w3.org/2000/svg" width="27" height="27"
+                            viewBox="0 0 27 27" fill="none">
+                            <path _ngcontent-serverApp-c116=""
+                                d="M20.168 10.4753C20.0051 9.89456 19.5251 9.43723 18.9157 9.28202C17.8111 9 13.382 9 13.382 9C13.382 9 8.95279 9 7.8482 9.28202C7.23881 9.43725 6.75885 9.89456 6.59596 10.4753C6.29999 11.5278 6.29999 13.7238 6.29999 13.7238C6.29999 13.7238 6.29999 15.9198 6.59596 16.9724C6.75885 17.5531 7.23881 17.9913 7.8482 18.1465C8.95279 18.4286 13.382 18.4286 13.382 18.4286C13.382 18.4286 17.8111 18.4286 18.9157 18.1465C19.5251 17.9913 20.0051 17.5531 20.168 16.9724C20.4639 15.9198 20.4639 13.7238 20.4639 13.7238C20.4639 13.7238 20.4639 11.5278 20.168 10.4753ZM11.9334 15.7176V11.73L15.6353 13.7239L11.9334 15.7176Z"
+                                fill="#92AACD"></path>
+                            <circle _ngcontent-serverApp-c116="" cx="13.5" cy="13.5" r="13" stroke="#92AACD"></circle>
+                        </svg>
+
+                        <svg _ngcontent-serverApp-c116="" xmlns="http://www.w3.org/2000/svg" width="27" height="27"
+                            viewBox="0 0 27 27" fill="none">
+                            <path _ngcontent-serverApp-c116=""
+                                d="M9.72229 19.9497H6.96934V11.4373H9.72229V19.9497ZM8.34433 10.2762C7.46403 10.2762 6.75 9.57606 6.75 8.7308C6.75 8.3248 6.91797 7.93542 7.21697 7.64833C7.51596 7.36124 7.92149 7.19995 8.34433 7.19995C8.76717 7.19995 9.1727 7.36124 9.47169 7.64833C9.77069 7.93542 9.93866 8.3248 9.93866 8.7308C9.93866 9.57606 9.22434 10.2762 8.34433 10.2762ZM20.0257 19.9497H17.2787V15.8059C17.2787 14.8184 17.2579 13.5519 15.8474 13.5519C14.4161 13.5519 14.1967 14.6248 14.1967 15.7348V19.9497H11.4467V11.4373H14.0871V12.5985H14.1256C14.4931 11.9297 15.3909 11.2239 16.7304 11.2239C19.5165 11.2239 20.0287 12.9855 20.0287 15.2737V19.9497H20.0257Z"
+                                fill="#92AACD"></path>
+                            <circle _ngcontent-serverApp-c116="" cx="13.5" cy="13.5" r="13" stroke="#92AACD"></circle>
+                        </svg>
+
+                        <svg _ngcontent-serverApp-c116="" xmlns="http://www.w3.org/2000/svg" width="27" height="27"
+                            viewBox="0 0 27 27" fill="none">
+                            <path _ngcontent-serverApp-c116=""
+                                d="M6.78385 7.19995L12.155 14.259L6.75 19.9983H7.96654L12.6987 14.9733L16.522 19.9983H20.6616L14.9882 12.5423L20.0192 7.19995H18.8026L14.4447 11.8277L10.9235 7.19995H6.78385ZM8.57282 8.08067H10.4746L18.8724 19.1176H16.9707L8.57282 8.08067Z"
+                                fill="#92AACD"></path>
+                            <circle _ngcontent-serverApp-c116="" cx="13.5" cy="13.5" r="13" stroke="#92AACD"></circle>
+                        </svg>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="row mt-4">
+                    <div class="col">
+                        <p>&copy; 2024 chan. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('#demo').on('slide.bs.carousel', function (e) {
+                    var $e = $(e.relatedTarget);
+                    var idx = $e.index();
+                    var itemsPerSlide = 3;
+                    var totalItems = $('.carousel-item').length;
+
+                    if (idx >= totalItems - (itemsPerSlide - 1)) {
+                        var it = itemsPerSlide - (totalItems - idx);
+                        for (var i = 0; i < it; i++) {
+                            // append slides to end
+                            if (e.direction == "left") {
+                                $('.carousel-item').eq(i).appendTo('.carousel-inner');
+                            }
+                            else {
+                                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+                            }
+                        }
+                    }
+                });
+            });
+        </script>
+
+</body>
+
+</html>
